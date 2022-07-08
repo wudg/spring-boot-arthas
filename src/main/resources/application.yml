@@ -1,0 +1,17 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: spring-boot-arthas
+
+arthas:
+  agent-id: ${spring.application.name}
+  tunnel-server: ws://127.0.0.1:7777/ws
+#  # 通过http访问的端口
+#  http-port: 8563
+#  # 通过telnet访问的端口
+#  telnet-port: 3658
+  session-timeout: 1800
+  # 绑定的ip
+  ip: 0.0.0.0
